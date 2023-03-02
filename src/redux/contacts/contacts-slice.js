@@ -45,30 +45,6 @@ const contactsSlice = createSlice({
         state.items.splice(index, 1);
       })
       .addCase(deleteContact.rejected, handleReject);
-
-    //   [fetchContacts.fulfilled](state, ) {
-    //     return (state = {
-    //       ...state,
-    //       isLoading: false,
-    //       error: null,
-    //       items: .payload,
-    //     });
-    //   },
-    //   [fetchContacts.rejected]: handleReject,
-    //   [addContact.pending]: handlePending,
-    //   [addContact.fulfilled](state, ) {
-    //     return (state = {
-    //       ...state,
-    //       isloading: false,
-    //       error: null,
-    //       items: .payload,
-    //     });
-    //   },
-    //   [addContact.rejected]: handleReject,
-    //   [deleteContact.pending]: handlePending,
-
-    //   [deleteContact.rejected]: handleReject,
-    // },
   },
 });
 
