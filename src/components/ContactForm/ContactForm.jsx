@@ -34,11 +34,11 @@ function ContactForm() {
       return Notiflix.Notify.failure(`${name} is already in contacts`);
     }
 
-    dispatch(addContact({ name, number }));
+    dispatch(addContact({ name, phone }));
     setState({ ...inititalState });
   };
 
-  const { name, number } = state;
+  const { name, phone } = state;
 
   return (
     <form className={styles.container} onSubmit={handleSubmit}>
@@ -61,9 +61,9 @@ function ContactForm() {
         <input
           className={styles.input}
           type="tel"
-          name="number"
+          name="phone"
           onChange={handleChange}
-          value={number}
+          value={phone}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
